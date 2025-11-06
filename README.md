@@ -6,7 +6,7 @@
 
 > **Animated SVG templates that tell stories, not stats—accessible, performant, zero backend required.**
 
-![Nexus Studio Intro](./templates/storytelling/tech-stack.svg)
+[![Nexus Studio](./SVG-animations/nexus-studio-intro.svg)](https://github.com/Tryboy869/SVG-animations)
 
 ---
 
