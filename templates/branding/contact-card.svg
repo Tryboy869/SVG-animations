@@ -149,7 +149,7 @@
       <text x="225" y="78" font-size="28" fill="white" font-weight="700" text-anchor="middle" class="font-cc">JD</text>
       
       <!-- Nom -->
-      <text x="225" y="125" class="font-cc name-cc" text-anchor="middle">Tryboy869</text>
+      <text x="225" y="125" class="font-cc name-cc" text-anchor="middle">Jane Doe</text>
       
       <!-- Titre -->
       <text x="225" y="148" class="font-cc title-cc" text-anchor="middle">Senior SVG Engineer</text>
