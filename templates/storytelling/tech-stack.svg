@@ -1,6 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="tech-title tech-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-labelledby="tech-title tech-desc">
   <title id="tech-title">Technology Stack</title>
   <desc id="tech-desc">Layered architecture showing frontend, backend, and infrastructure technologies</desc>
+  
+  <defs>
+    <linearGradient id="layer1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    
+    <linearGradient id="layer2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    
+    <linearGradient id="layer3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+    
+    <linearGradient id="layer4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
   
   <style>
     @media (prefers-reduced-motion: reduce) {
@@ -8,49 +38,155 @@
     }
   </style>
   
-  <rect width="600" height="400" fill="#0f172a"/>
+  <rect width="600" height="450" fill="#0f172a"/>
   
-  <text x="300" y="35" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="white">
+  <!-- Animated grid background -->
+  <g opacity="0.1">
+    <line x1="0" y1="100" x2="600" y2="100" stroke="#60a5fa" stroke-width="1">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="180" x2="600" y2="180" stroke="#a78bfa" stroke-width="1">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="260" x2="600" y2="260" stroke="#f472b6" stroke-width="1">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="340" x2="600" y2="340" stroke="#34d399" stroke-width="1">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <text x="300" y="40" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="white">
     Technology Stack
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
   </text>
   
+  <!-- Layer 1: Frontend -->
   <g>
-    <rect x="100" y="70" width="400" height="60" rx="8" fill="#3b82f6">
-      <animate attributeName="opacity" values="0;1" begin="0s;stackloop.end+5s" dur="0.5s" fill="freeze"/>
+    <rect x="80" y="80" width="440" height="70" rx="12" fill="url(#layer1)" filter="url(#glow)">
+      <animate attributeName="x" values="80;85;80" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
     </rect>
-    <text x="300" y="105" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Frontend - React + TypeScript</text>
+    <rect x="80" y="80" width="0" height="70" rx="12" fill="#1e40af" opacity="0.3">
+      <animate attributeName="width" values="0;440;0" dur="8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="300" y="110" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">
+      Frontend
+    </text>
+    <text x="300" y="130" text-anchor="middle" font-family="Arial" font-size="14" fill="#dbeafe">
+      React • TypeScript • Tailwind
+    </text>
   </g>
   
+  <!-- Data flow indicator 1 -->
   <g>
-    <rect x="100" y="150" width="400" height="60" rx="8" fill="#8b5cf6">
-      <animate attributeName="opacity" values="0;1" begin="0.5s;stackloop.end+5.5s" dur="0.5s" fill="freeze"/>
-    </rect>
-    <text x="300" y="185" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Backend - Node.js + Express</text>
+    <circle cx="300" cy="150" r="4" fill="#60a5fa">
+      <animate attributeName="cy" values="150;165" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
   </g>
   
+  <!-- Layer 2: Backend -->
   <g>
-    <rect x="100" y="230" width="400" height="60" rx="8" fill="#ec4899">
-      <animate attributeName="opacity" values="0;1" begin="1s;stackloop.end+6s" dur="0.5s" fill="freeze"/>
+    <rect x="80" y="160" width="440" height="70" rx="12" fill="url(#layer2)" filter="url(#glow)">
+      <animate attributeName="x" values="80;75;80" dur="6s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" begin="1s" repeatCount="indefinite"/>
     </rect>
-    <text x="300" y="265" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Database - PostgreSQL</text>
+    <rect x="80" y="160" width="0" height="70" rx="12" fill="#6b21a8" opacity="0.3">
+      <animate attributeName="width" values="0;440;0" dur="8s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    <text x="300" y="190" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">
+      Backend
+    </text>
+    <text x="300" y="210" text-anchor="middle" font-family="Arial" font-size="14" fill="#ede9fe">
+      Node.js • Express • GraphQL
+    </text>
   </g>
   
+  <!-- Data flow indicator 2 -->
   <g>
-    <rect x="100" y="310" width="400" height="60" rx="8" fill="#10b981">
-      <animate id="stackloop" attributeName="opacity" values="0;1" begin="1.5s;stackloop.end+6.5s" dur="0.5s" fill="freeze"/>
-    </rect>
-    <text x="300" y="345" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Infrastructure - Docker + AWS</text>
+    <circle cx="300" cy="230" r="4" fill="#a78bfa">
+      <animate attributeName="cy" values="230;245" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
   </g>
   
+  <!-- Layer 3: Database -->
   <g>
-    <line x1="300" y1="130" x2="300" y2="150" stroke="#60a5fa" stroke-width="2">
-      <animate attributeName="opacity" values="0;1" begin="2s;stackloop.end+7s" dur="0.3s" fill="freeze"/>
-    </line>
-    <line x1="300" y1="210" x2="300" y2="230" stroke="#a78bfa" stroke-width="2">
-      <animate attributeName="opacity" values="0;1" begin="2.3s;stackloop.end+7.3s" dur="0.3s" fill="freeze"/>
-    </line>
-    <line x1="300" y1="290" x2="300" y2="310" stroke="#f0abfc" stroke-width="2">
-      <animate attributeName="opacity" values="0;1" begin="2.6s;stackloop.end+7.6s" dur="0.3s" fill="freeze"/>
-    </line>
+    <rect x="80" y="240" width="440" height="70" rx="12" fill="url(#layer3)" filter="url(#glow)">
+      <animate attributeName="x" values="80;85;80" dur="6s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" begin="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="80" y="240" width="0" height="70" rx="12" fill="#9f1239" opacity="0.3">
+      <animate attributeName="width" values="0;440;0" dur="8s" begin="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="300" y="270" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">
+      Database
+    </text>
+    <text x="300" y="290" text-anchor="middle" font-family="Arial" font-size="14" fill="#fce7f3">
+      PostgreSQL • Redis • MongoDB
+    </text>
   </g>
+  
+  <!-- Data flow indicator 3 -->
+  <g>
+    <circle cx="300" cy="310" r="4" fill="#f472b6">
+      <animate attributeName="cy" values="310;325" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Layer 4: Infrastructure -->
+  <g>
+    <rect x="80" y="320" width="440" height="70" rx="12" fill="url(#layer4)" filter="url(#glow)">
+      <animate attributeName="x" values="80;75;80" dur="6s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" begin="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="80" y="320" width="0" height="70" rx="12" fill="#065f46" opacity="0.3">
+      <animate attributeName="width" values="0;440;0" dur="8s" begin="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="300" y="350" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">
+      Infrastructure
+    </text>
+    <text x="300" y="370" text-anchor="middle" font-family="Arial" font-size="14" fill="#d1fae5">
+      Docker • Kubernetes • AWS
+    </text>
+  </g>
+  
+  <!-- Side indicators -->
+  <g>
+    <circle cx="60" cy="115" r="8" fill="#60a5fa">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="195" r="8" fill="#a78bfa">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="275" r="8" fill="#f472b6">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="355" r="8" fill="#34d399">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Status indicator -->
+  <g>
+    <circle cx="540" cy="115" r="5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="540" cy="195" r="5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="540" cy="275" r="5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="540" cy="355" r="5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <text x="300" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    All systems operational • Data flowing smoothly
+  </text>
 </svg>
