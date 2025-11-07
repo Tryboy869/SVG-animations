@@ -31,13 +31,10 @@
     @media (prefers-reduced-motion: reduce) {
       * { animation-play-state: paused !important; }
     }
-    .label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: 600; fill: white; }
-    .sublabel { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #94a3b8; }
   </style>
   
   <rect width="600" height="400" fill="url(#bgGrad)"/>
   
-  <!-- Title -->
   <text x="300" y="35" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
     CI/CD Pipeline
   </text>
@@ -45,113 +42,85 @@
   <!-- CI Section -->
   <g id="ci-section">
     <rect x="50" y="70" width="220" height="120" rx="10" fill="url(#ciGrad)" opacity="0.2"/>
-    <text x="160" y="95" text-anchor="middle" class="label">Continuous Integration</text>
+    <text x="160" y="95" text-anchor="middle" class="label" fill="white" font-family="Arial" font-size="14" font-weight="600">Continuous Integration</text>
     
-    <!-- Code Commit -->
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="0.5s" dur="0.5s" fill="freeze"/>
-      <circle cx="90" cy="130" r="20" fill="#3b82f6" filter="url(#glow)"/>
+    <g>
+      <circle cx="90" cy="130" r="20" fill="#3b82f6" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;1" begin="0.5s;loopend.end+5s" dur="0.5s" fill="freeze"/>
+      </circle>
       <path d="M85,125 L85,135 L95,135 L95,125 Z M87,127 L87,133 L93,133 L93,127 Z" fill="white"/>
-      <text x="90" y="163" text-anchor="middle" class="sublabel">Commit</text>
+      <text x="90" y="163" text-anchor="middle" font-family="Arial" font-size="11" fill="#94a3b8">Commit</text>
     </g>
     
-    <!-- Build -->
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.5s" fill="freeze"/>
-      <circle cx="160" cy="130" r="20" fill="#6366f1" filter="url(#glow)"/>
+    <g>
+      <circle cx="160" cy="130" r="20" fill="#6366f1" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;1" begin="1.5s;loopend.end+6s" dur="0.5s" fill="freeze"/>
+      </circle>
       <rect x="153" y="123" width="14" height="14" fill="white" rx="2"/>
-      <text x="160" y="163" text-anchor="middle" class="sublabel">Build</text>
+      <text x="160" y="163" text-anchor="middle" font-family="Arial" font-size="11" fill="#94a3b8">Build</text>
     </g>
     
-    <!-- Test -->
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="2.5s" dur="0.5s" fill="freeze"/>
-      <circle cx="230" cy="130" r="20" fill="#8b5cf6" filter="url(#glow)"/>
+    <g>
+      <circle cx="230" cy="130" r="20" fill="#8b5cf6" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;1" begin="2.5s;loopend.end+7s" dur="0.5s" fill="freeze"/>
+      </circle>
       <path d="M225,132 L228,135 L238,123" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <text x="230" y="163" text-anchor="middle" class="sublabel">Test</text>
+      <text x="230" y="163" text-anchor="middle" font-family="Arial" font-size="11" fill="#94a3b8">Test</text>
     </g>
     
-    <!-- Connection lines CI -->
-    <path d="M110,130 L140,130" stroke="#60a5fa" stroke-width="2" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="1s" dur="0.3s" fill="freeze"/>
-      <animate attributeName="stroke-dasharray" from="0,30" to="30,0" begin="1s" dur="0.5s" fill="freeze"/>
+    <path d="M110,130 L140,130" stroke="#60a5fa" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,30;30,0" begin="1s;loopend.end+5.5s" dur="0.5s" fill="freeze"/>
     </path>
-    <path d="M180,130 L210,130" stroke="#60a5fa" stroke-width="2" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="2s" dur="0.3s" fill="freeze"/>
-      <animate attributeName="stroke-dasharray" from="0,30" to="30,0" begin="2s" dur="0.5s" fill="freeze"/>
+    <path d="M180,130 L210,130" stroke="#60a5fa" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,30;30,0" begin="2s;loopend.end+6.5s" dur="0.5s" fill="freeze"/>
     </path>
   </g>
   
-  <!-- Arrow between CI and CD -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="3.5s" dur="0.5s" fill="freeze"/>
+  <!-- Arrow CI to CD -->
+  <g>
     <path d="M270,150 L330,150" stroke="#a78bfa" stroke-width="3" stroke-dasharray="5,5">
-      <animate attributeName="stroke-dashoffset" from="10" to="0" dur="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1" begin="3.5s;loopend.end+8s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="stroke-dashoffset" values="10;0" dur="1s" repeatCount="indefinite"/>
     </path>
     <polygon points="330,145 340,150 330,155" fill="#a78bfa"/>
   </g>
   
   <!-- CD Section -->
-  <g id="cd-section" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="4s" dur="0.5s" fill="freeze"/>
-    <rect x="330" y="70" width="220" height="120" rx="10" fill="url(#cdGrad)" opacity="0.2"/>
-    <text x="440" y="95" text-anchor="middle" class="label">Continuous Deployment</text>
+  <g id="cd-section">
+    <rect x="330" y="70" width="220" height="120" rx="10" fill="url(#cdGrad)" opacity="0.2">
+      <animate attributeName="opacity" values="0;0.2" begin="4s;loopend.end+8.5s" dur="0.5s" fill="freeze"/>
+    </rect>
+    <text x="440" y="95" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="600">Continuous Deployment</text>
     
-    <!-- Stage -->
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="4.5s" dur="0.5s" fill="freeze"/>
-      <circle cx="370" cy="130" r="20" fill="#a855f7" filter="url(#glow)"/>
+    <g>
+      <circle cx="370" cy="130" r="20" fill="#a855f7" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;1" begin="4.5s;loopend.end+9s" dur="0.5s" fill="freeze"/>
+      </circle>
       <text x="370" y="135" text-anchor="middle" font-size="20" fill="white">S</text>
-      <text x="370" y="163" text-anchor="middle" class="sublabel">Stage</text>
+      <text x="370" y="163" text-anchor="middle" font-family="Arial" font-size="11" fill="#94a3b8">Stage</text>
     </g>
     
-    <!-- Verify -->
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="5.5s" dur="0.5s" fill="freeze"/>
-      <circle cx="440" cy="130" r="20" fill="#c026d3" filter="url(#glow)"/>
+    <g>
+      <circle cx="440" cy="130" r="20" fill="#c026d3" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;1" begin="5.5s;loopend.end+10s" dur="0.5s" fill="freeze"/>
+      </circle>
       <path d="M435,130 L439,134 L448,123" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <text x="440" y="163" text-anchor="middle" class="sublabel">Verify</text>
+      <text x="440" y="163" text-anchor="middle" font-family="Arial" font-size="11" fill="#94a3b8">Verify</text>
     </g>
     
-    <!-- Prod -->
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="6.5s" dur="0.5s" fill="freeze"/>
+    <g>
       <circle cx="510" cy="130" r="20" fill="#ec4899" filter="url(#glow)">
-        <animate attributeName="r" values="20;23;20" dur="2s" begin="7s" repeatCount="indefinite"/>
+        <animate id="loopend" attributeName="opacity" values="0;1" begin="6.5s;loopend.end+11s" dur="0.5s" fill="freeze"/>
       </circle>
       <text x="510" y="135" text-anchor="middle" font-size="20" fill="white">P</text>
-      <text x="510" y="163" text-anchor="middle" class="sublabel">Prod</text>
+      <text x="510" y="163" text-anchor="middle" font-family="Arial" font-size="11" fill="#94a3b8">Prod</text>
     </g>
     
-    <!-- Connection lines CD -->
-    <path d="M390,130 L420,130" stroke="#c084fc" stroke-width="2" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="5s" dur="0.3s" fill="freeze"/>
-      <animate attributeName="stroke-dasharray" from="0,30" to="30,0" begin="5s" dur="0.5s" fill="freeze"/>
+    <path d="M390,130 L420,130" stroke="#c084fc" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,30;30,0" begin="5s;loopend.end+9.5s" dur="0.5s" fill="freeze"/>
     </path>
-    <path d="M460,130 L490,130" stroke="#c084fc" stroke-width="2" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="6s" dur="0.3s" fill="freeze"/>
-      <animate attributeName="stroke-dasharray" from="0,30" to="30,0" begin="6s" dur="0.5s" fill="freeze"/>
+    <path d="M460,130 L490,130" stroke="#c084fc" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,30;30,0" begin="6s;loopend.end+10.5s" dur="0.5s" fill="freeze"/>
     </path>
-  </g>
-  
-  <!-- Feedback loop -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="7.5s" dur="0.5s" fill="freeze"/>
-    <path d="M510,150 Q510,250 90,250 L90,150" stroke="#f472b6" stroke-width="2" fill="none" stroke-dasharray="5,5">
-      <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="2s" repeatCount="indefinite"/>
-    </path>
-    <polygon points="85,150 90,140 95,150" fill="#f472b6"/>
-    <text x="300" y="270" text-anchor="middle" class="sublabel" fill="#f472b6">Feedback Loop</text>
-  </g>
-  
-  <!-- Status indicators -->
-  <g id="status" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="8s" dur="0.5s" fill="freeze"/>
-    <rect x="200" y="310" width="200" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-    <circle cx="230" cy="340" r="8" fill="#10b981">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="250" y="335" class="sublabel" fill="white">Status:</text>
-    <text x="250" y="350" class="sublabel" fill="#10b981">All Checks Passed</text>
   </g>
 </svg>
