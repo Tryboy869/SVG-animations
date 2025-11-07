@@ -2,6 +2,37 @@
   <title id="skills-title">Skills Development Journey</title>
   <desc id="skills-desc">Visual representation of skill progression over time</desc>
   
+  <defs>
+    <linearGradient id="skill1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="skill2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="skill3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <linearGradient id="skill4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="skill5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
   <style>
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; }
@@ -10,82 +41,134 @@
   
   <rect width="700" height="400" fill="#0f172a"/>
   
-  <text x="350" y="35" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="white">
+  <!-- Animated particles background -->
+  <g opacity="0.2">
+    <circle cx="100" cy="50" r="2" fill="#60a5fa">
+      <animate attributeName="cy" values="50;350;50" dur="15s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="100" r="2" fill="#a78bfa">
+      <animate attributeName="cy" values="100;400;100" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="80" r="2" fill="#34d399">
+      <animate attributeName="cy" values="80;380;80" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="18s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <text x="350" y="40" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="white">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
     Skills Progression
   </text>
   
+  <!-- JavaScript -->
   <g>
-    <text x="50" y="100" font-family="Arial" font-size="14" font-weight="bold" fill="#94a3b8">
-      <animate attributeName="opacity" values="0;1" begin="0s;skillsloop.end+5s" dur="0.5s" fill="freeze"/>
+    <text x="50" y="105" font-family="Arial" font-size="15" font-weight="bold" fill="#94a3b8">
       JavaScript
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
     </text>
-    <rect x="150" y="85" width="500" height="20" rx="10" fill="#1e293b"/>
-    <rect x="150" y="85" width="0" height="20" rx="10" fill="#3b82f6">
-      <animate attributeName="width" values="0;450" begin="0.5s;skillsloop.end+5.5s" dur="2s" fill="freeze"/>
+    <rect x="150" y="88" width="500" height="24" rx="12" fill="#1e293b"/>
+    <rect x="150" y="88" width="450" height="24" rx="12" fill="url(#skill1)" filter="url(#glow)">
+      <animate attributeName="width" values="0;450" dur="3s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
     </rect>
-    <text x="660" y="100" font-family="Arial" font-size="12" fill="#60a5fa">
-      <animate attributeName="opacity" values="0;1" begin="2.5s;skillsloop.end+7.5s" dur="0.3s" fill="freeze"/>
+    <!-- Shine effect -->
+    <rect x="150" y="88" width="40" height="24" rx="12" fill="white" opacity="0.3">
+      <animate attributeName="x" values="150;560" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="660" y="105" font-family="Arial" font-size="14" font-weight="bold" fill="#60a5fa">
       90%
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.5s" fill="freeze"/>
     </text>
   </g>
   
+  <!-- React -->
   <g>
-    <text x="50" y="160" font-family="Arial" font-size="14" font-weight="bold" fill="#94a3b8">
-      <animate attributeName="opacity" values="0;1" begin="0.3s;skillsloop.end+5.3s" dur="0.5s" fill="freeze"/>
+    <text x="50" y="165" font-family="Arial" font-size="15" font-weight="bold" fill="#94a3b8">
       React
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" begin="0.3s" repeatCount="indefinite"/>
     </text>
-    <rect x="150" y="145" width="500" height="20" rx="10" fill="#1e293b"/>
-    <rect x="150" y="145" width="0" height="20" rx="10" fill="#8b5cf6">
-      <animate attributeName="width" values="0;400" begin="0.8s;skillsloop.end+5.8s" dur="2s" fill="freeze"/>
+    <rect x="150" y="148" width="500" height="24" rx="12" fill="#1e293b"/>
+    <rect x="150" y="148" width="400" height="24" rx="12" fill="url(#skill2)" filter="url(#glow)">
+      <animate attributeName="width" values="0;400" dur="3s" begin="0.3s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" begin="0.3s" repeatCount="indefinite"/>
     </rect>
-    <text x="660" y="160" font-family="Arial" font-size="12" fill="#a78bfa">
-      <animate attributeName="opacity" values="0;1" begin="2.8s;skillsloop.end+7.8s" dur="0.3s" fill="freeze"/>
+    <rect x="150" y="148" width="40" height="24" rx="12" fill="white" opacity="0.3">
+      <animate attributeName="x" values="150;510" dur="3s" begin="0.3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="660" y="165" font-family="Arial" font-size="14" font-weight="bold" fill="#a78bfa">
       80%
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.8s" fill="freeze"/>
     </text>
   </g>
   
+  <!-- Node.js -->
   <g>
-    <text x="50" y="220" font-family="Arial" font-size="14" font-weight="bold" fill="#94a3b8">
-      <animate attributeName="opacity" values="0;1" begin="0.6s;skillsloop.end+5.6s" dur="0.5s" fill="freeze"/>
+    <text x="50" y="225" font-family="Arial" font-size="15" font-weight="bold" fill="#94a3b8">
       Node.js
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" begin="0.6s" repeatCount="indefinite"/>
     </text>
-    <rect x="150" y="205" width="500" height="20" rx="10" fill="#1e293b"/>
-    <rect x="150" y="205" width="0" height="20" rx="10" fill="#10b981">
-      <animate attributeName="width" values="0;425" begin="1.1s;skillsloop.end+6.1s" dur="2s" fill="freeze"/>
+    <rect x="150" y="208" width="500" height="24" rx="12" fill="#1e293b"/>
+    <rect x="150" y="208" width="425" height="24" rx="12" fill="url(#skill3)" filter="url(#glow)">
+      <animate attributeName="width" values="0;425" dur="3s" begin="0.6s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" begin="0.6s" repeatCount="indefinite"/>
     </rect>
-    <text x="660" y="220" font-family="Arial" font-size="12" fill="#34d399">
-      <animate attributeName="opacity" values="0;1" begin="3.1s;skillsloop.end+8.1s" dur="0.3s" fill="freeze"/>
+    <rect x="150" y="208" width="40" height="24" rx="12" fill="white" opacity="0.3">
+      <animate attributeName="x" values="150;535" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="660" y="225" font-family="Arial" font-size="14" font-weight="bold" fill="#34d399">
       85%
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.1s" fill="freeze"/>
     </text>
   </g>
   
+  <!-- TypeScript -->
   <g>
-    <text x="50" y="280" font-family="Arial" font-size="14" font-weight="bold" fill="#94a3b8">
-      <animate attributeName="opacity" values="0;1" begin="0.9s;skillsloop.end+5.9s" dur="0.5s" fill="freeze"/>
+    <text x="50" y="285" font-family="Arial" font-size="15" font-weight="bold" fill="#94a3b8">
       TypeScript
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" begin="0.9s" repeatCount="indefinite"/>
     </text>
-    <rect x="150" y="265" width="500" height="20" rx="10" fill="#1e293b"/>
-    <rect x="150" y="265" width="0" height="20" rx="10" fill="#f59e0b">
-      <animate attributeName="width" values="0;375" begin="1.4s;skillsloop.end+6.4s" dur="2s" fill="freeze"/>
+    <rect x="150" y="268" width="500" height="24" rx="12" fill="#1e293b"/>
+    <rect x="150" y="268" width="375" height="24" rx="12" fill="url(#skill4)" filter="url(#glow)">
+      <animate attributeName="width" values="0;375" dur="3s" begin="0.9s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" begin="0.9s" repeatCount="indefinite"/>
     </rect>
-    <text x="660" y="280" font-family="Arial" font-size="12" fill="#fbbf24">
-      <animate attributeName="opacity" values="0;1" begin="3.4s;skillsloop.end+8.4s" dur="0.3s" fill="freeze"/>
+    <rect x="150" y="268" width="40" height="24" rx="12" fill="white" opacity="0.3">
+      <animate attributeName="x" values="150;485" dur="3s" begin="0.9s" repeatCount="indefinite"/>
+    </rect>
+    <text x="660" y="285" font-family="Arial" font-size="14" font-weight="bold" fill="#fbbf24">
       75%
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.4s" fill="freeze"/>
     </text>
   </g>
   
+  <!-- Python -->
   <g>
-    <text x="50" y="340" font-family="Arial" font-size="14" font-weight="bold" fill="#94a3b8">
-      <animate attributeName="opacity" values="0;1" begin="1.2s;skillsloop.end+6.2s" dur="0.5s" fill="freeze"/>
+    <text x="50" y="345" font-family="Arial" font-size="15" font-weight="bold" fill="#94a3b8">
       Python
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" begin="1.2s" repeatCount="indefinite"/>
     </text>
-    <rect x="150" y="325" width="500" height="20" rx="10" fill="#1e293b"/>
-    <rect x="150" y="325" width="0" height="20" rx="10" fill="#ec4899">
-      <animate attributeName="width" values="0;350" begin="1.7s;skillsloop.end+6.7s" dur="2s" fill="freeze"/>
+    <rect x="150" y="328" width="500" height="24" rx="12" fill="#1e293b"/>
+    <rect x="150" y="328" width="350" height="24" rx="12" fill="url(#skill5)" filter="url(#glow)">
+      <animate attributeName="width" values="0;350" dur="3s" begin="1.2s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" begin="1.2s" repeatCount="indefinite"/>
     </rect>
-    <text x="660" y="340" font-family="Arial" font-size="12" fill="#f472b6">
-      <animate id="skillsloop" attributeName="opacity" values="0;1" begin="3.7s;skillsloop.end+8.7s" dur="0.3s" fill="freeze"/>
+    <rect x="150" y="328" width="40" height="24" rx="12" fill="white" opacity="0.3">
+      <animate attributeName="x" values="150;460" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="660" y="345" font-family="Arial" font-size="14" font-weight="bold" fill="#f472b6">
       70%
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.7s" fill="freeze"/>
+    </text>
+  </g>
+  
+  <!-- Summary stats -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="4s" dur="1s" fill="freeze"/>
+    <rect x="50" y="375" width="600" height="1" fill="#334155"/>
+    <text x="350" y="395" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">
+      Average Proficiency: 80% • Total Skills: 5 • Learning: Continuous
     </text>
   </g>
 </svg>
