@@ -16,66 +16,66 @@
   
   <g>
     <circle cx="120" cy="120" r="40" fill="#3b82f6">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0s;teamloop.end+5s" dur="0.5s" fill="freeze"/>
     </circle>
     <text x="120" y="130" text-anchor="middle" font-family="Arial" font-size="24" fill="white">A</text>
     <text x="120" y="180" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">
-      <animate attributeName="opacity" values="0;1" begin="0.3s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.3s;teamloop.end+5.3s" dur="0.5s" fill="freeze"/>
       Alice Chen
     </text>
     <text x="120" y="200" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">
-      <animate attributeName="opacity" values="0;1" begin="0.3s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.3s;teamloop.end+5.3s" dur="0.5s" fill="freeze"/>
       Lead Developer
     </text>
   </g>
   
   <g>
     <circle cx="270" cy="120" r="40" fill="#8b5cf6">
-      <animate attributeName="opacity" values="0;1" begin="0.3s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.3s;teamloop.end+5.3s" dur="0.5s" fill="freeze"/>
     </circle>
     <text x="270" y="130" text-anchor="middle" font-family="Arial" font-size="24" fill="white">B</text>
     <text x="270" y="180" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">
-      <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.6s;teamloop.end+5.6s" dur="0.5s" fill="freeze"/>
       Bob Smith
     </text>
     <text x="270" y="200" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">
-      <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.6s;teamloop.end+5.6s" dur="0.5s" fill="freeze"/>
       UI/UX Designer
     </text>
   </g>
   
   <g>
     <circle cx="430" cy="120" r="40" fill="#ec4899">
-      <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.6s;teamloop.end+5.6s" dur="0.5s" fill="freeze"/>
     </circle>
     <text x="430" y="130" text-anchor="middle" font-family="Arial" font-size="24" fill="white">C</text>
     <text x="430" y="180" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">
-      <animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.9s;teamloop.end+5.9s" dur="0.5s" fill="freeze"/>
       Carol Davis
     </text>
     <text x="430" y="200" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">
-      <animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.9s;teamloop.end+5.9s" dur="0.5s" fill="freeze"/>
       Product Manager
     </text>
   </g>
   
   <g>
     <circle cx="580" cy="120" r="40" fill="#10b981">
-      <animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.9s;teamloop.end+5.9s" dur="0.5s" fill="freeze"/>
     </circle>
     <text x="580" y="130" text-anchor="middle" font-family="Arial" font-size="24" fill="white">D</text>
     <text x="580" y="180" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">
-      <animate attributeName="opacity" values="0;1" begin="1.2s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="1.2s;teamloop.end+6.2s" dur="0.5s" fill="freeze"/>
       Dan Lee
     </text>
     <text x="580" y="200" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">
-      <animate attributeName="opacity" values="0;1" begin="1.2s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="1.2s;teamloop.end+6.2s" dur="0.5s" fill="freeze"/>
       DevOps Engineer
     </text>
   </g>
   
   <text x="350" y="260" text-anchor="middle" font-family="Arial" font-size="14" fill="#64748b">
-    <animate attributeName="opacity" values="0;1" begin="1.5s" dur="0.5s" fill="freeze"/>
+    <animate id="teamloop" attributeName="opacity" values="0;1" begin="1.5s;teamloop.end+6.5s" dur="0.5s" fill="freeze"/>
     Building amazing products together
   </text>
 </svg>
