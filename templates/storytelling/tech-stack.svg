@@ -16,53 +16,41 @@
   
   <g>
     <rect x="100" y="70" width="400" height="60" rx="8" fill="#3b82f6">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0s;stackloop.end+5s" dur="0.5s" fill="freeze"/>
     </rect>
-    <text x="300" y="105" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" fill="freeze"/>
-      Frontend - React + TypeScript
-    </text>
+    <text x="300" y="105" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Frontend - React + TypeScript</text>
   </g>
   
   <g>
     <rect x="100" y="150" width="400" height="60" rx="8" fill="#8b5cf6">
-      <animate attributeName="opacity" values="0;1" begin="0.5s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="0.5s;stackloop.end+5.5s" dur="0.5s" fill="freeze"/>
     </rect>
-    <text x="300" y="185" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">
-      <animate attributeName="opacity" values="0;1" begin="0.5s" dur="0.5s" fill="freeze"/>
-      Backend - Node.js + Express
-    </text>
+    <text x="300" y="185" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Backend - Node.js + Express</text>
   </g>
   
   <g>
     <rect x="100" y="230" width="400" height="60" rx="8" fill="#ec4899">
-      <animate attributeName="opacity" values="0;1" begin="1s" dur="0.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="1s;stackloop.end+6s" dur="0.5s" fill="freeze"/>
     </rect>
-    <text x="300" y="265" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">
-      <animate attributeName="opacity" values="0;1" begin="1s" dur="0.5s" fill="freeze"/>
-      Database - PostgreSQL
-    </text>
+    <text x="300" y="265" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Database - PostgreSQL</text>
   </g>
   
   <g>
     <rect x="100" y="310" width="400" height="60" rx="8" fill="#10b981">
-      <animate attributeName="opacity" values="0;1" begin="1.5s" dur="0.5s" fill="freeze"/>
+      <animate id="stackloop" attributeName="opacity" values="0;1" begin="1.5s;stackloop.end+6.5s" dur="0.5s" fill="freeze"/>
     </rect>
-    <text x="300" y="345" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">
-      <animate attributeName="opacity" values="0;1" begin="1.5s" dur="0.5s" fill="freeze"/>
-      Infrastructure - Docker + AWS
-    </text>
+    <text x="300" y="345" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Infrastructure - Docker + AWS</text>
   </g>
   
   <g>
     <line x1="300" y1="130" x2="300" y2="150" stroke="#60a5fa" stroke-width="2">
-      <animate attributeName="opacity" values="0;1" begin="2s" dur="0.3s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="2s;stackloop.end+7s" dur="0.3s" fill="freeze"/>
     </line>
     <line x1="300" y1="210" x2="300" y2="230" stroke="#a78bfa" stroke-width="2">
-      <animate attributeName="opacity" values="0;1" begin="2.3s" dur="0.3s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="2.3s;stackloop.end+7.3s" dur="0.3s" fill="freeze"/>
     </line>
     <line x1="300" y1="290" x2="300" y2="310" stroke="#f0abfc" stroke-width="2">
-      <animate attributeName="opacity" values="0;1" begin="2.6s" dur="0.3s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1" begin="2.6s;stackloop.end+7.6s" dur="0.3s" fill="freeze"/>
     </line>
   </g>
 </svg>
