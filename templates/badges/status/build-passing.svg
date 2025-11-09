@@ -1,0 +1,40 @@
+<svg width="120" height="20" viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="build-title">
+  <title id="build-title">Build Passing Badge</title>
+  
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+  
+  <defs>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1"/>
+    </linearGradient>
+    
+    <filter id="badgeGlow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Left section (label) -->
+  <rect width="45" height="20" fill="#555"/>
+  <text x="22.5" y="14" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">build</text>
+  
+  <!-- Right section (status) -->
+  <rect x="45" width="75" height="20" fill="url(#successGrad)" filter="url(#badgeGlow)">
+    <animate attributeName="opacity" values="1;0.85;1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="82.5" y="14" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">passing</text>
+  
+  <!-- Pulse effect -->
+  <circle cx="115" cy="10" r="2" fill="#fff" opacity="0.8">
+    <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
