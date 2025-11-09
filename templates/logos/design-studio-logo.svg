@@ -1,0 +1,158 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="design-title design-desc">
+  <title id="design-title">Design Studio Logo - Animated</title>
+  <desc id="design-desc">Organic morphing logo with vibrant colors for design studios</desc>
+  
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+  
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1">
+        <animate attributeName="stop-color" values="#f093fb;#4facfe;#43e97b;#f093fb" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#4facfe;stop-opacity:1">
+        <animate attributeName="stop-color" values="#4facfe;#43e97b;#f5576c;#4facfe" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1">
+        <animate attributeName="stop-color" values="#43e97b;#f5576c;#4facfe;#43e97b" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <radialGradient id="centerGlow">
+      <stop offset="0%" style="stop-color:white;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:white;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Filters -->
+    <filter id="morphGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- Glow background -->
+  <circle cx="200" cy="200" r="150" fill="url(#centerGlow)" opacity="0.1">
+    <animate attributeName="r" values="150;180;150" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Main morphing shape -->
+  <path fill="url(#rainbowGrad)" filter="url(#morphGlow)" opacity="0.8">
+    <animate attributeName="d" 
+             values="
+               M200,120 C240,120 280,140 280,180 C280,220 240,240 200,240 C160,240 120,220 120,180 C120,140 160,120 200,120;
+               M200,110 C250,120 290,150 285,190 C280,230 235,245 200,240 C165,245 120,230 115,190 C110,150 150,120 200,110;
+               M200,115 C245,115 285,145 288,185 C285,225 240,250 200,245 C160,250 115,225 112,185 C115,145 155,115 200,115;
+               M200,120 C240,120 280,140 280,180 C280,220 240,240 200,240 C160,240 120,220 120,180 C120,140 160,120 200,120
+             "
+             dur="12s"
+             repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Inner morphing shape -->
+  <path fill="none" stroke="white" stroke-width="2" opacity="0.6">
+    <animate attributeName="d"
+             values="
+               M200,150 C220,150 240,160 240,180 C240,200 220,210 200,210 C180,210 160,200 160,180 C160,160 180,150 200,150;
+               M200,145 C225,150 245,165 243,185 C241,205 218,213 200,210 C182,213 159,205 157,185 C155,165 175,150 200,145;
+               M200,148 C223,148 243,163 244,183 C243,203 220,215 200,212 C180,215 157,203 156,183 C157,163 177,148 200,148;
+               M200,150 C220,150 240,160 240,180 C240,200 220,210 200,210 C180,210 160,200 160,180 C160,160 180,150 200,150
+             "
+             dur="12s"
+             repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Rotating outer ring -->
+  <g transform="translate(200, 200)">
+    <g opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+      <circle cx="100" cy="0" r="5" fill="#f093fb" filter="url(#morphGlow)">
+        <animate attributeName="r" values="5;8;5" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-100" cy="0" r="5" fill="#4facfe" filter="url(#morphGlow)">
+        <animate attributeName="r" values="5;8;5" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="100" r="5" fill="#43e97b" filter="url(#morphGlow)">
+        <animate attributeName="r" values="5;8;5" dur="3s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="-100" r="5" fill="#f5576c" filter="url(#morphGlow)">
+        <animate attributeName="r" values="5;8;5" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Counter-rotating inner ring -->
+  <g transform="translate(200, 200)">
+    <g opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite"/>
+      <circle cx="70" cy="0" r="4" fill="#fee140" filter="url(#morphGlow)">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-70" cy="0" r="4" fill="#fa709a" filter="url(#morphGlow)">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="70" r="4" fill="#00f2fe" filter="url(#morphGlow)">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="-70" r="4" fill="#38f9d7" filter="url(#morphGlow)">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Center dot -->
+  <circle cx="200" cy="200" r="10" fill="white" filter="url(#morphGlow)">
+    <animate attributeName="r" values="10;15;10" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Floating creative sparks -->
+  <g opacity="0.7">
+    <circle cx="120" cy="120" r="3" fill="#f093fb">
+      <animate attributeName="cy" values="120;100;120" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="120" r="3" fill="#4facfe">
+      <animate attributeName="cy" values="120;100;120" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="280" r="3" fill="#43e97b">
+      <animate attributeName="cy" values="280;260;280" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="280" r="3" fill="#f5576c">
+      <animate attributeName="cy" values="280;260;280" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="200" r="2" fill="#fee140">
+      <animate attributeName="cx" values="100;80;100" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="200" r="2" fill="#fa709a">
+      <animate attributeName="cx" values="300;320;300" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Pulse waves -->
+  <g transform="translate(200, 200)" opacity="0.2">
+    <circle r="80" fill="none" stroke="white" stroke-width="1">
+      <animate attributeName="r" values="80;120;160" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="80" fill="none" stroke="white" stroke-width="1">
+      <animate attributeName="r" values="80;120;160" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
