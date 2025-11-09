@@ -103,7 +103,7 @@ Showcase your skills:
 
 ---
 
-### **4. Animated Logos** (5 templates) 🆕
+### **4. Animated Logos** (6 templates) 🆕
 
 Generic professional logos for any brand:
 
@@ -127,6 +127,47 @@ Generic professional logos for any brand:
 ![Mobile App](./templates/logos/mobile-app-logo.svg)
 *App icon style with bounce effect and notification badge - Mobile-first design*
 
+#### **Awesome Logo** 🔥 🆕
+![Awesome](./templates/logos/awesome-logo.svg)
+*Cool sunglasses logo with progressive reveal and multicolor shine - For awesome projects!*
+
+---
+
+### **5. Animated Badges** (20 badges) 🆕 🔥
+
+Professional GitHub README badges with subtle animations:
+
+#### **Status Badges**
+![Build Passing](./templates/badges/status/build-passing.svg)
+![Tests Success](./templates/badges/status/tests-success.svg)
+![Coverage 95%](./templates/badges/status/coverage-badge.svg)
+![Deploy Success](./templates/badges/status/deploy-success.svg)
+![Maintained Yes](./templates/badges/status/maintained-yes.svg)
+
+#### **Metrics Badges**
+![Stars 1.2k](./templates/badges/metrics/stars-counter.svg)
+![Forks 456](./templates/badges/metrics/forks-badge.svg)
+![Contributors 42](./templates/badges/metrics/contributors-badge.svg)
+![Downloads 10k/mo](./templates/badges/metrics/downloads-badge.svg)
+![Issues 3 Open](./templates/badges/metrics/issues-open.svg)
+
+#### **Tech Stack Badges**
+![JavaScript](./templates/badges/tech/javascript-badge.svg)
+![Python](./templates/badges/tech/python-badge.svg)
+![React](./templates/badges/tech/react-badge.svg)
+![Node.js](./templates/badges/tech/nodejs-badge.svg)
+![TypeScript](./templates/badges/tech/typescript-badge.svg)
+
+#### **Social Badges**
+![Twitter Follow](./templates/badges/social/twitter-badge.svg)
+![Discord Chat](./templates/badges/social/discord-badge.svg)
+![Email Contact](./templates/badges/social/email-badge.svg)
+
+#### **Custom Templates**
+![Custom Text](./templates/badges/custom/custom-text-badge.svg)
+![Custom Metric](./templates/badges/custom/custom-metric-badge.svg)
+*Fully customizable badge templates - edit text, colors, and animations!*
+
 ---
 
 ## 🚀 Quick Start
@@ -138,6 +179,7 @@ Browse [`templates/`](./templates/) and pick one:
 - `storytelling/` - Project narratives
 - `branding/` - Personal portfolios
 - `logos/` - Animated brand identities 🆕
+- `badges/` - Animated status/metrics/tech badges 🆕 🔥
 
 ### **2. Copy to Your Repo**
 
@@ -146,7 +188,8 @@ Browse [`templates/`](./templates/) and pick one:
 git clone https://github.com/Tryboy869/SVG-animations.git
 
 # Copy template to your project
-cp SVG-animations/templates/logos/tech-startup-logo.svg ./assets/
+cp SVG-animations/templates/logos/awesome-logo.svg ./assets/
+cp SVG-animations/templates/badges/status/build-passing.svg ./assets/
 ```
 
 ### **3. Embed in README**
@@ -154,7 +197,13 @@ cp SVG-animations/templates/logos/tech-startup-logo.svg ./assets/
 ```markdown
 ## Our Brand
 
-![Company Logo](./assets/tech-startup-logo.svg)
+![Logo](./assets/awesome-logo.svg)
+
+## Status
+
+![Build](./assets/build-passing.svg)
+![Tests](./assets/tests-success.svg)
+![Coverage](./assets/coverage-badge.svg)
 ```
 
 ### **4. Customize (Optional)**
@@ -175,19 +224,23 @@ Edit SVG in any text editor:
 
 ## ⚡ Performance Benchmarks
 
-**Animated logo example (Tech Startup):**
-- **File size:** 12.4 KB
+**Animated logo example (Awesome):**
+- **File size:** 9.8 KB
 - **Load time:** <50ms
 - **Frame rate:** 60 FPS
-- **Bandwidth:** 0.012 MB
+- **Bandwidth:** 0.010 MB
+
+**Animated badge example (Build Passing):**
+- **File size:** 1.2 KB
+- **Load time:** <20ms
+- **Frame rate:** 60 FPS
 
 **Equivalent video logo animation:**
 - **File size:** 3.8 MB
 - **Load time:** 1.2s (4G)
 - **Quality loss:** Pixelation on zoom
-- **Bandwidth:** 3.8 MB
 
-**Result:** **306x lighter**, instant load, perfect quality at any size.
+**Result:** **388x lighter** (logo), instant load, perfect quality at any size.
 
 ---
 
@@ -234,10 +287,10 @@ Replace hex codes with your brand colors.
 <animate dur="1s" begin="0.5s"/>
 ```
 
-### **Change Text**
+### **Change Text (Badges)**
 
 ```xml
-<text x="300" y="100">Your Custom Text</text>
+<text x="50" y="14">YOUR TEXT</text>
 ```
 
 ### **Disable Animations**
@@ -256,18 +309,21 @@ For users who prefer reduced motion, animations automatically stop. Test:
 - Show architecture diagrams
 - Display project timeline
 - **Animated project logo** 🆕
+- **Status badges** (build, tests, coverage) 🆕
 
 ### **Startups**
 - Product demo without video hosting
 - Feature roadmap visualization
 - Team member showcase
 - **Dynamic brand identity** 🆕
+- **Metrics badges** (users, downloads) 🆕
 
 ### **Developer Portfolios**
 - Skills progression timeline
 - Project highlights grid
 - Open source contribution journey
 - **Professional animated avatar** 🆕
+- **Tech stack badges** (languages, frameworks) 🆕
 
 ### **Technical Documentation**
 - API flow diagrams
@@ -278,47 +334,29 @@ For users who prefer reduced motion, animations automatically stop. Test:
 - **Animated logos for GitHub profiles**
 - **Dynamic README headers**
 - **Attention-grabbing landing sections**
+- **Professional status indicators** 🆕
 
 ---
 
-## 🎨 Logo Customization Examples
+## 🎨 Badge Customization Examples
 
-### **Tech Startup Logo**
+### **Custom Text Badge**
 ```xml
-<!-- Change the hexagon gradient -->
-<linearGradient id="techGradient">
-  <stop offset="0%" style="stop-color:#YOUR_PRIMARY"/>
-  <stop offset="100%" style="stop-color:#YOUR_SECONDARY"/>
+<!-- Edit the text -->
+<text x="30" y="14">YOUR LABEL</text>
+<text x="90" y="14">YOUR VALUE</text>
+
+<!-- Edit the colors -->
+<linearGradient id="customGrad">
+  <stop offset="0%" style="stop-color:#YOUR_COLOR"/>
 </linearGradient>
 ```
 
-### **Creative Agency Logo**
+### **Custom Metric Badge**
 ```xml
-<!-- Change constellation colors -->
-<circle fill="url(#pink)"/> <!-- Replace #pink with your palette -->
-```
-
-### **SaaS Company Logo**
-```xml
-<!-- Adjust layer colors -->
-<rect fill="url(#saasGrad1)"/> <!-- Your brand gradient -->
-```
-
-### **Design Studio Logo**
-```xml
-<!-- Customize morphing shape colors -->
-<path fill="url(#rainbowGrad)"/> <!-- Multi-color animation -->
-```
-
-### **Mobile App Logo**
-```xml
-<!-- Change app icon gradient -->
-<linearGradient id="appGradient">
-  <stop offset="0%" style="stop-color:#YOUR_APP_COLOR"/>
-</linearGradient>
-
-<!-- Customize notification badge number -->
-<text>5</text> <!-- Change badge count -->
+<!-- Change the metric name and value -->
+<text x="27.5" y="14">uptime</text>
+<text x="87.5" y="14">99.99%</text>
 ```
 
 ---
@@ -333,12 +371,12 @@ We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md)
 - Interactive dashboards
 - Tutorial walkthroughs
 - **More animated logos** 🆕
-- **Animated badges** (coming soon) 🔜
+- **More badge styles** 🆕
 
 **Requirements:**
 - Pure SVG (no external dependencies)
 - WCAG 2.1 AA compliant
-- File size < 50 KB
+- File size < 50 KB (badges < 5 KB)
 - Mobile-optimized
 - Generic/customizable (not brand-specific)
 
@@ -355,8 +393,8 @@ We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md)
 ## 🎯 Roadmap
 
 - [x] **Phase 1:** 15 core templates (workflow, storytelling, branding) ✅
-- [x] **Phase 2:** 5 animated generic logos ✅ 🆕
-- [ ] **Phase 3:** Animated badges (status, metrics, tech, social) 🔜
+- [x] **Phase 2:** 6 animated generic logos ✅ 🆕
+- [x] **Phase 3:** 20 animated badges (status, metrics, tech, social) ✅ 🆕 🔥
 - [ ] **Phase 4:** Interactive dashboards
 - [ ] **Phase 5:** Template builder web app
 - [ ] **Phase 6:** CLI tool for generation
@@ -376,6 +414,7 @@ This project challenges the status quo:
 - **Maintenance:** Edit with text editor, not video tools
 - **Version Control:** Git-friendly XML format
 - **Branding:** Animated logos without video complexity 🆕
+- **Professionalism:** Animated badges without external services 🆕
 
 ---
 
