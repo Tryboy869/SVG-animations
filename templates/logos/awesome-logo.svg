@@ -114,10 +114,10 @@
     </path>
     
     <!-- Lens shadows (depth) -->
-    <ellipse cx="-45" cy="5" rx="22" ry="18" fill="#000" opacity="0.3">
+    <ellipse cx="-45" cy="5" rx="22" ry="18" fill="#000" opacity="0">
       <animate attributeName="opacity" values="0;0.3" dur="0.5s" begin="1.4s" fill="freeze"/>
     </ellipse>
-    <ellipse cx="45" cy="5" rx="22" ry="18" fill="#000" opacity="0.3">
+    <ellipse cx="45" cy="5" rx="22" ry="18" fill="#000" opacity="0">
       <animate attributeName="opacity" values="0;0.3" dur="0.5s" begin="1.4s" fill="freeze"/>
     </ellipse>
     
@@ -204,7 +204,7 @@
       <animate attributeName="opacity" values="0;1;0" dur="5s" begin="5s" repeatCount="indefinite"/>
     </circle>
     <circle cx="250" cy="260" r="2" fill="#ff6b9d">
-      <animate attributeName="cy" values="260;240;260" dur="6.5s" begin="5s" repeatCount="indefinite=""/>
+      <animate attributeName="cy" values="260;240;260" dur="6.5s" begin="5s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;1;0" dur="6.5s" begin="5s" repeatCount="indefinite"/>
     </circle>
   </g>
