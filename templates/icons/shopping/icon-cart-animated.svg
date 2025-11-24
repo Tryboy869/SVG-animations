@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="24" 
+     height="24" 
+     viewBox="0 0 24 24"
+     role="img"
+     aria-labelledby="cart-title">
+  
+  <title id="cart-title">Shopping Cart Icon</title>
+  
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+  
+  <!-- Panier -->
+  <path d="M1,1 L5,1 L7,13 L19,13 L21,5 L6,5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-dasharray="60"
+        stroke-dashoffset="60">
+    <animate attributeName="stroke-dashoffset" 
+             from="60" 
+             to="0" 
+             dur="1s" 
+             fill="freeze"/>
+    <animate attributeName="stroke-dashoffset" 
+             values="0;60;0" 
+             begin="3s"
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Roue gauche -->
+  <circle cx="8" cy="20" r="2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-dasharray="13"
+          stroke-dashoffset="13">
+    <animate attributeName="stroke-dashoffset" 
+             from="13" 
+             to="0" 
+             begin="1s"
+             dur="0.3s" 
+             fill="freeze"/>
+  </circle>
+  
+  <!-- Roue droite -->
+  <circle cx="17" cy="20" r="2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-dasharray="13"
+          stroke-dashoffset="13">
+    <animate attributeName="stroke-dashoffset" 
+             from="13" 
+             to="0" 
+             begin="1.3s"
+             dur="0.3s" 
+             fill="freeze"/>
+  </circle>
+  
+  <!-- Badge notification -->
+  <circle cx="19" cy="3" r="3" fill="currentColor" opacity="0">
+    <animate attributeName="opacity" 
+             values="0;1" 
+             begin="1.8s"
+             dur="0.3s" 
+             fill="freeze"/>
+    <animate attributeName="r" 
+             values="3;4;3" 
+             begin="2.5s"
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </circle>
+  
+</svg>
