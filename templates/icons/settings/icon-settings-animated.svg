@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="24" 
+     height="24" 
+     viewBox="0 0 24 24"
+     role="img"
+     aria-labelledby="settings-title">
+  
+  <title id="settings-title">Settings Icon</title>
+  
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+  
+  <!-- Engrenage -->
+  <g transform-origin="12 12">
+    <animateTransform attributeName="transform"
+                      type="rotate"
+                      from="0"
+                      to="360"
+                      begin="1.5s"
+                      dur="4s"
+                      repeatCount="indefinite"/>
+    
+    <path d="M12,2 L13,5 L16,6 L18,4 L20,6 L18,9 L19,12 L22,13 L22,15 L19,16 L18,19 L20,21 L18,23 L15,21 L12,22 L11,19 L8,18 L6,20 L4,18 L6,15 L5,12 L2,11 L2,9 L5,8 L6,5 L4,3 L6,1 L9,3 L12,2 Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="round"
+          stroke-dasharray="100"
+          stroke-dashoffset="100">
+      <animate attributeName="stroke-dashoffset" 
+               from="100" 
+               to="0" 
+               dur="1.5s" 
+               fill="freeze"/>
+    </path>
+    
+    <circle cx="12" cy="12" r="3"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+  </g>
+  
+</svg>
