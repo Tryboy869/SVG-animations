@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="24" 
+     height="24" 
+     viewBox="0 0 24 24"
+     role="img"
+     aria-labelledby="user-title">
+  
+  <title id="user-title">User Icon</title>
+  
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+  
+  <!-- Tête -->
+  <circle cx="12" cy="8" r="4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-dasharray="25"
+          stroke-dashoffset="25">
+    <animate attributeName="stroke-dashoffset" 
+             from="25" 
+             to="0" 
+             dur="0.6s" 
+             fill="freeze"/>
+    <animate attributeName="stroke-dashoffset" 
+             values="0;25;0" 
+             begin="3s"
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Corps -->
+  <path d="M4,20 C4,16 7,13 12,13 C17,13 20,16 20,20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-dasharray="24"
+        stroke-dashoffset="24">
+    <animate attributeName="stroke-dashoffset" 
+             from="24" 
+             to="0" 
+             begin="0.6s"
+             dur="0.6s" 
+             fill="freeze"/>
+  </path>
+  
+  <!-- Pulse autour -->
+  <circle cx="12" cy="12" r="10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1"
+          opacity="0">
+    <animate attributeName="r" 
+             values="10;14;18" 
+             begin="1.5s"
+             dur="2s" 
+             repeatCount="indefinite"/>
+    <animate attributeName="opacity" 
+             values="0.4;0.2;0" 
+             begin="1.5s"
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </circle>
+  
+</svg>
